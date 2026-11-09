@@ -56,7 +56,7 @@ public class CalculadoraTest {
     @Test
     public void deveRetornarVerdadeiroQuandoNumeroForPar(){
 
-        assertFalse(calculadora.ehPar(7));
+        assertTrue(calculadora.ehPar(8));
     }
 
     @BeforeEach
@@ -70,4 +70,12 @@ public class CalculadoraTest {
     public void finalizar(){
         System.out.println("Finalizando...");
     }
+
+    @Test
+    public void deveLancarExcecaoAoDividirPorZero() {
+        assertThrows(ArithmeticException.class, () ->{
+            calculadora.dividir(10, 0);
+        });
+    }
+
 }
