@@ -9,7 +9,7 @@ public class Produto {
 
     @Id
     private Integer id;
-    
+
     private String nome;
     private String descricao;
     private BigDecimal preco;
